@@ -1,3 +1,6 @@
+//This is where all of your code should go inside
+
+//Menu toggle in mobile 
 $(document).ready(function() {
 	$('.menu-toggle').click(function(e) {
 		e.preventDefault();

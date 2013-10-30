@@ -698,6 +698,9 @@ a {
   a:hover {
     color: #217dbb; }
 
+ul li {
+  margin-bottom: 0.625em; }
+
 img {
   width: auto;
   max-width: 100%; }
@@ -842,7 +845,7 @@ div, section, aside, footer, header {
     padding: 0;
     max-width: none; }
 
-.centered {
+.centered[class*='col-'] {
   float: none;
   margin-left: auto;
   margin-right: auto;

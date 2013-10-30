@@ -6,12 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SinglePage Starter Template</title>
-        <meta name="description" content="">
+        <title>Single Page Starter Template</title>
+        <meta name="description" content="A starter template for single page websites">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -25,7 +25,7 @@
         <!-- Add your site or application content here -->
         <header class="main-nav cf">
             <a href="#" class="logo left" data-id="home">SPS</a>
-            <a href="#" class="menu-toggle right" data-layout="push"><i class="icomoon-menu-3"></i></a>
+            <a href="#" class="menu-toggle right" data-layout="slide"><i class="icomoon-menu-3"></i></a>
             <ul class="right">
                 <li><a href="#" data-id="components" ></i>Components</a></li>
                 <li><a href="#" data-id="why" >Why</a></li>
@@ -36,9 +36,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="intro">
-                        <h1>Single Page Skeleton <br><span class="subheader">Because the world needs yet another one!</span></h1>
-                        <p>The perfect <b>skeleton</b> for a responsive single page website</p>
-                        <p><a href="#" class="button primary large"><i class="icomoon-github-4"></i>View on GitHub</a> <!-- <a href="" class="button large"><i class="icomoon-globe"></i>Zyad Sherif.com</a> --></p>
+                        <h1>Single Page Starter <br><span class="subheader">Because the world needs yet another one!</span></h1>
+                        <p>The perfect <b>starter</b> for a responsive single page website</p>
+                        <p><a href="https://github.com/zyadsherif/singlePageStarter" class="button primary large"><i class="icomoon-github-4"></i>View on GitHub</a> <!-- <a href="" class="button large"><i class="icomoon-globe"></i>Zyad Sherif.com</a> --></p>
                     </div>
                 </div>
             </div>
@@ -48,15 +48,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2>Smooth Scrolling</h2>
-                    <p>A very lightweight and easy to use plugin that allows anchors that refer to elements in the same page to scroll smoothly with animation to the desired destinarion with flexibility in speed also</p>
+                    <p>A very lightweight and easy to use jQuery plugin that allows anchors that refer to elements in the same page to scroll smoothly with animation and flexibility in speed also</p>
                     <h4>Examples</h4>
                     <p><a href="#" data-id="home" data-speed="500">Go to "Home" quickly</a></p>
                     <p><a href="#" data-id="why" data-speed="5000">Go to "Credits" but not in a hurry !</a></p>
                     <h4>Implementation</h4>
-                    <p>All you have to do is include two data attributes in the desired anchor, "data-id" and "data-speed" while the speed is optional, the id has to be equal to the element ID that you want to scroll to, read on <a href="#"><i class="icomoon-github-4"></i>Github</a> for more info</p>
+                    <p>All you have to do is include two data attributes in the desired anchor, "data-id" and "data-speed" while the speed is optional, the id has to be equal to the element ID that you want to scroll to, read on <a href="http://github.com/zyadsherif/singlepagestarter"><i class="icomoon-github-4"></i> GitHub</a> for more info.</p>
                 </div>
                 <div class="col-sm-12">
                     <h2>Grid System</h2>
+                    <p>The grid is very flexible, it provides Four breakpoints, Source Ordering, Offsets, Centering, read more on <a href="http://github.com/zyadsherif/singlepagestarter"><i class="icomoon-github-4"></i> GitHub</a> and view the examples.</p>
                     <div class="row">
                         <div class="col-sm-11">
                             <div class="panel">11</div>
@@ -130,11 +131,11 @@
             </div>
         </section>
         <section id="why" class="view">
-            <h2 class="section-header">Why another template/skeleton?</h2>
+            <h2 class="section-header">Why another starter template/skeleton?</h2>
             <div class="row">
                 <div class="col-sm-12">
                     <p>That's actually a very good question, it's the one that I started asking for myself when creating this Skeleton.</p>
-                    <p>Well, as you might know by now that single page websites are very trendy and used very often, the need to a lightweight yet powerful skeleton without the need to add all the features of a fully fledged framework like Foundation or Bootstrap became essential</p>
+                    <p>Well, as you might know by now that single page websites are very trendy and used very often, the need to a lightweight yet powerful skeleton without having to include all the features of a fully fledged framework like Foundation or Bootstrap became essential</p>
                     <p>Also a very key feature is smooth scrolling and navigation through this one page website, it was a pain in the ass to use some of the plugins out there so I've decided to create one of my own that simplifies the process and allows ease of use across the document</p>
                     <p>Finally there is no need to say how important responsive web design is, so you now can use a very powerful/customisable/flexible responsive grid without having to integrate a large framework</p>
                 </div>
@@ -143,13 +144,18 @@
         <section id="credits" class="view">
             <h2 class="section-header">Give credits when credits are due</h2>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-lg-8 centered">
                     <p>As small as this project may seem it actually involved a lot of other awesome developers' code, so let's list them</p>
                     <p><b>singlePageSkeleton$ ls -a</b></p>
                     <ul>
                         <li><a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> by <a href="http://twitter.com/paul_irish" target="_blank">Paul Irish</a> and friends</li>
-                        <li><a href=""></a></li>
+                        <li>I referenced this <a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/build-a-freshly-squeezed-responsive-grid-system/" target="_blank">NetTutsPlus</a> article while artifacting the responsive grid, very useful and informative</li>
+                        <li>Colors all belong to the legendary <a href="http://flatuicolors.com">Flat UI Colors</a> by <a href="https://twitter.com/ahmetsulek" target="_blank">Ahmet Sülek</a></li>
                     </ul>
+                    <div class="mark">
+                        <p>This project is brought to you by <b><a href="http://zyadsherif.com">Zyad Sherif</a></b></p>
+                        <p><a href="http://twitter.com/zyadsherif" class="button large success"><i class="icomoon-twitter"></i>Follow on Twitter</a> <a href="http://zyadsherif.com" class="button large secondary"><i class="icomoon-globe"></i>View Portolfio</a></p>
+                    </div>
                 </div>
             </div>
         </section>
