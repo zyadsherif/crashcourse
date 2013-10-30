@@ -1,13 +1,32 @@
 @import "settings";
 @import "bebas";
 
+.remove-class{
+	display: none;
+}
 section.view{
 	min-height: 700px;
+	padding-top: 100px;
+	border-bottom: 4px solid $secondary-color;
+	padding-bottom: 50px;
+	&:last-child{
+		border-bottom: none;
+	}
+	.section-header{
+		text-align: center;
+		font-weight: 300;
+	}
 }
 
 .main-nav{
-	background-color: $secondary-color;
+	background-color: $primary-color;
 	margin-bottom: 20px;
+	border-bottom: 4px solid darken($primary-color, 30%);
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0; 
+	width: 100%;
 	.logo{
 		padding: 15px 20px;
 		font-size: 1.2em;
@@ -15,6 +34,11 @@ section.view{
 		letter-spacing: 2px;
 		font-weight: bold;
 		color: $header-font-color;
+	}
+	.menu-toggle{
+		font-size: 1.5em;
+		color: $header-font-color;
+		padding: 10px 20px;
 	}
 	ul{
 		list-style: none;
@@ -30,3 +54,100 @@ section.view{
 
 	}
 }
+
+#home{
+	//background-color: lighten(#9b59b6, 20%);
+}
+
+.intro{
+	margin-top: 100px;
+	text-align: center;
+	h1{
+		text-align: center;
+		font-weight: 300;
+		font-size: 2em;
+	}
+
+	i{
+		font-size: 1.2em;
+		margin-right: 10px;
+	}
+}
+
+
+@media only screen and (min-width : $medium-screen) {
+	.menu-toggle{
+		display: none;
+	}
+	.intro{
+		h1{
+			font-size: 4em;
+		}
+	}
+}
+
+@media only screen and (max-width: $medium-screen - 1) {
+	body{
+		-webkit-transition: right .5s;
+		-moz-transition: right .5s;
+		-ms-transition: right .5s;
+		-o-transition: right .5s;
+		transition: right .5s;
+	}
+	.main-nav{
+		ul{
+			position: fixed;
+			right: -260px;
+			top: 0;
+			margin-top: 0;
+			padding-top: 0px;
+			width: 260px;
+			height: 100%;
+			background-color: lighten($primary-color, 30%);
+			z-index: 999;
+			-webkit-transition: right .5s;
+			-moz-transition: right .5s;
+			-ms-transition: right .5s;
+			-o-transition: right .5s;
+			transition: right .5s;
+			li{
+				float: none;
+				padding: 20px 10px;
+			}
+
+		}
+	}
+
+	body.menu-slide{
+		.remove-class{
+			position: fixed;
+			display: block;
+			width: 100%;
+			height: 100%;
+			z-index: 120;
+			color: rgba(255,255,255, .5);
+		}
+		.main-nav{
+			ul{
+				right: 0;
+			}
+		}
+	}
+	body.menu-push{
+		right: 260px;
+		.main-nav{
+			ul{
+				right: 0;
+			}
+		}
+		.remove-class{
+			position: fixed;
+			display: block;
+			width: 100%;
+			height: 100%;
+			z-index: 120;
+			color: rgba(255,255,255, .5);
+		}
+	}
+}
+

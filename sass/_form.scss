@@ -15,6 +15,10 @@
    color: $input-placeholder-color;
 }
 
+label{
+	cursor: pointer;
+}
+
 input, textarea{
 	color: $input-font-color;
 	font-size: $input-font-size;
@@ -23,11 +27,11 @@ input, textarea{
 	border-color: $input-border-color;
 	border-style: $input-border-style;
 	line-height: $input-line-height;
+	margin-bottom: $input-margin-bottom;
 	padding: $input-padding;
 	border-radius: $input-border-radius;
 	width: 100%;
 	max-width: 100%;
-
 	outline: 0;
 
 	&:focus{

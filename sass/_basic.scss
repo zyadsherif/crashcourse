@@ -55,6 +55,10 @@ h5,h6{
 	font-size: emCalc(16px);
 }
 
+.subheader{
+	font-size: .8em;
+	color: lighten($header-font-color, 20%);
+}
 
 //Helper Classes
 

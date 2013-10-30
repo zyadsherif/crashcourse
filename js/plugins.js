@@ -38,6 +38,10 @@ function goToByScroll(id, speed){
   $("a[data-id]").click(function(e) { 
         // Prevent a page reload when a link is pressed
       e.preventDefault(); 
+      //Remove Body classes that for the responsive right nav layout, don't worry much about those
+        $('body').removeClass('menu-push');
+        $('body').removeClass('menu-slide');
         // Call the scroll function
-      goToByScroll($(this).data("id"), $(this).data("speed"));   
+      goToByScroll($(this).data("id"), $(this).data("speed"));
+
   });

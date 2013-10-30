@@ -19,7 +19,7 @@ $body-font-color: #444;
 $body-font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, sans-serif;
 $header-font-color: #222;
 $header-font-family: 'Droid Arabic Kufi', "Helvetica Neue", Helvetica, sans-serif;
-$header-font-weight: 100;
+$header-font-weight: 200;
 
 
 //Buttons
@@ -48,6 +48,7 @@ $input-font-color: $body-font-color;
 $input-font-size: emCalc(18px);
 $input-line-height: 1.2em;
 $input-padding: emCalc(10px);
+$input-margin-bottom: emCalc(10px);
 $input-bg-color: #fbfbfb;
 $input-border-width: 2px;
 $input-border-color: lighten($body-font-color, 40%);

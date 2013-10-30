@@ -6,12 +6,29 @@
   font-weight: normal;
   font-style: normal; }
 
+.remove-class {
+  display: none; }
+
 section.view {
-  min-height: 700px; }
+  min-height: 700px;
+  padding-top: 100px;
+  border-bottom: 4px solid #bdc3c7;
+  padding-bottom: 50px; }
+  section.view:last-child {
+    border-bottom: none; }
+  section.view .section-header {
+    text-align: center;
+    font-weight: 300; }
 
 .main-nav {
-  background-color: #bdc3c7;
-  margin-bottom: 20px; }
+  background-color: #3498db;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #124364;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%; }
   .main-nav .logo {
     padding: 15px 20px;
     font-size: 1.2em;
@@ -19,6 +36,10 @@ section.view {
     letter-spacing: 2px;
     font-weight: bold;
     color: #222222; }
+  .main-nav .menu-toggle {
+    font-size: 1.5em;
+    color: #222222;
+    padding: 10px 20px; }
   .main-nav ul {
     list-style: none; }
     .main-nav ul li {
@@ -28,3 +49,69 @@ section.view {
         font-family: 'bebas';
         font-size: 1.2em;
         color: #3c3c3c; }
+
+.intro {
+  margin-top: 100px;
+  text-align: center; }
+  .intro h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2em; }
+  .intro i {
+    font-size: 1.2em;
+    margin-right: 10px; }
+
+@media only screen and (min-width: 48em) {
+  .menu-toggle {
+    display: none; }
+
+  .intro h1 {
+    font-size: 4em; } }
+@media only screen and (max-width: 47em) {
+  body {
+    -webkit-transition: right .5s;
+    -moz-transition: right .5s;
+    -ms-transition: right .5s;
+    -o-transition: right .5s;
+    transition: right .5s; }
+
+  .main-nav ul {
+    position: fixed;
+    right: -260px;
+    top: 0;
+    margin-top: 0;
+    padding-top: 0px;
+    width: 260px;
+    height: 100%;
+    background-color: #b6daf2;
+    z-index: 999;
+    -webkit-transition: right .5s;
+    -moz-transition: right .5s;
+    -ms-transition: right .5s;
+    -o-transition: right .5s;
+    transition: right .5s; }
+    .main-nav ul li {
+      float: none;
+      padding: 20px 10px; }
+
+  body.menu-slide .remove-class {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+    color: rgba(255, 255, 255, 0.5); }
+  body.menu-slide .main-nav ul {
+    right: 0; }
+
+  body.menu-push {
+    right: 260px; }
+    body.menu-push .main-nav ul {
+      right: 0; }
+    body.menu-push .remove-class {
+      position: fixed;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 120;
+      color: rgba(255, 255, 255, 0.5); } }
