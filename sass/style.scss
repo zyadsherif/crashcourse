@@ -1,0 +1,32 @@
+@import "settings";
+@import "bebas";
+
+section.view{
+	min-height: 700px;
+}
+
+.main-nav{
+	background-color: $secondary-color;
+	margin-bottom: 20px;
+	.logo{
+		padding: 15px 20px;
+		font-size: 1.2em;
+		font-family: 'bebas';
+		letter-spacing: 2px;
+		font-weight: bold;
+		color: $header-font-color;
+	}
+	ul{
+		list-style: none;
+		li{
+			float: left;
+			a{
+				padding: 5px 20px;
+				font-family: 'bebas';
+				font-size: 1.2em;
+				color: lighten($header-font-color, 10%);
+			}
+		}
+
+	}
+}

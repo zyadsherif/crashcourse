@@ -1,0 +1,147 @@
+
+$horizontal: right;
+
+@if $text-direction == rtl {
+    $horizontal: right;
+  } @else if $text-direction == ltr {
+    $horizontal: left;
+  }
+
+body, html{
+	direction: $text-direction;	
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+
+
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  /* Removes padding behaviour on widths */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* Attribute selector */
+[class*='col-'] {
+  float: $horizontal;
+  position: relative;
+  padding-left: emCalc(10px);
+  padding-right: emCalc(10px);
+}
+/* Floats last ".col-" to the right */
+[class*='col-']:last-of-type {
+  padding-left: emCalc(10px);
+	@if $horizontal == right {
+	    float: left;
+	  } @else if $horizontal == left {
+	    float: right;
+	  }
+}
+/* Clearfix */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+div, section, aside, footer, header{
+	width: auto;
+}
+
+.row{
+	width: $row-width;
+	max-width: 100%;
+	padding: 0 emCalc(10px);
+	margin: 0 auto;
+	position: relative;
+
+	.row{
+		width: auto;
+		margin-left: emCalc(-10px);
+		margin-right: emCalc(-10px);
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+		max-width: none;
+	}
+}
+
+
+.centered{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+
+@mixin col($total: $grid-columns, $size: sm){
+	$all: $total;
+	@while $total > 0{
+	  .col-#{$size}-#{$total}{
+	    width: 100%/($all/$total);
+		}
+	  $total: $total - 1
+	}
+	
+}
+
+@mixin offset($total: $grid-columns, $size: sm){
+	$all: $total;
+	@while $total > 0{
+	  .offset-#{$size}-#{$total}{
+		margin-#{$horizontal}: 100%/($all/$total);
+		}
+	  $total: $total - 1
+	}
+}
+
+@mixin order($total: $grid-columns, $size: sm, $direction: push){
+	$all: $total;
+	@while $total > 0{
+	  .#{$direction}-#{$size}-#{$total}{
+		  	@if $direction == push{
+				#{$horizontal}: 100%/($all/$total);
+		  	} 
+		  	@else if $direction == pull{
+				#{$horizontal}: -100%/($all/$total);
+		  	}
+		}
+	  $total: $total - 1
+	}
+}
+
+
+@include col();
+@include offset();
+@include order();
+@include order($direction: pull);
+
+
+
+
+@media screen and (min-width : $medium-screen) {
+	
+	@include col($size: md);
+	@include offset($size: md);
+	@include order($size: md);
+	@include order($size: md, $direction: pull);
+
+}
+
+@media screen and (min-width : $large-screen) {	
+	@include col($size: lg);
+	@include offset($size: lg);
+	@include order($size: lg);
+	@include order($size: lg, $direction: pull);
+
+}
+
+

@@ -1,0 +1,19 @@
+
+@mixin panel($bgcolor: $secondary-color, $color: $header-font-color, $padding: 15px){
+	background-color: $bgcolor;
+	color: $color;
+	padding: $padding;
+	margin-bottom: 10px;
+}
+
+.panel{
+	@include panel()
+}
+
+.panel.primary{
+	@include panel($primary-color, #ffffff)
+}
+
+.panel.success{
+	@include panel($success-color, #ffffff)
+}

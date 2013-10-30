@@ -1,0 +1,85 @@
+
+body{
+	background-color: $body-bg-color;
+	color: $body-font-color;
+	font-family: $body-font-family;
+	font-size: emCalc(16px);
+	-webkit-font-smoothing:antialiased;
+	line-height: 1.3em;
+}
+
+p{
+	line-height: 1.5;
+	margin: emCalc(5px) 0 emCalc(15px);
+}
+
+a{
+	text-decoration: none;
+	color: $primary-color;
+	&:hover{
+		color: darken($primary-color,10%);
+	}
+}
+
+img{
+	width: auto;
+	max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: $header-font-color;
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	line-height: 1.5;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+h1{
+	font-size: emCalc(38px);
+}
+
+h2{
+	font-size: emCalc(30px);
+}
+
+h3{
+	font-size: emCalc(24px);
+}
+
+h4{
+	font-size: emCalc(20px);
+}
+
+h5,h6{
+	font-size: emCalc(16px);
+}
+
+
+//Helper Classes
+
+.left{
+	float: left !important;
+}
+
+.right{
+	float: right !important;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
