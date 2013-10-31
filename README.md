@@ -1,7 +1,7 @@
 SinglePageStarter
 =================
 
-A starter template for Single Page marketing websites that will git you off and running with the scroll animations enhanced with a very customisable grid system and some nice predefined buttons
+A starter template for Single Page marketing websites that will git you off and running with the scroll animations enhanced with a very customisable grid system and some nice predefined buttons, checkout the working [demo](http://zyadsherif.github.io/singlePageStarter/ "Single Page Starter Template")
 
 Sass based, you can easily edit the color scheme and remove components as you wish, you may also usr any framework you want like Foundation - Bootstrap - Gumby
 
